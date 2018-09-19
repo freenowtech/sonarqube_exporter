@@ -1,0 +1,33 @@
+{
+  "metrics": [
+    {
+      "id": "3",
+      "key": "branch_coverage",
+      "type": "PERCENT",
+      "name": "Condition Coverage",
+      "description": "Condition coverage",
+      "domain": "Coverage",
+      "direction": 1,
+      "qualitative": true,
+      "hidden": false,
+      "custom": false,
+      "decimalScale": 1
+    },
+    {
+      "id": "4",
+      "key": "class_complexity",
+      "type": "FLOAT",
+      "name": "Complexity / Class",
+      "description": "Complexity average by class",
+      "domain": "Complexity",
+      "direction": -1,
+      "qualitative": true,
+      "hidden": true,
+      "custom": false,
+      "decimalScale": 1
+    }
+  ],
+  "total": 4,
+  "p": 1,
+  "ps": 2
+}

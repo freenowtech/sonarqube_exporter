@@ -1,0 +1,31 @@
+{
+  "component": {
+    "id": "XYZ",
+    "key": "ABC",
+    "name": "testOne",
+    "description": "",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "conditions_to_cover",
+        "value": "794",
+        "periods": [
+          {
+            "index": 1,
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "metric": "branch_coverage",
+        "value": "35.4",
+        "periods": [
+          {
+            "index": 1,
+            "value": "0.0"
+          }
+        ]
+      }
+    ]
+  }
+}

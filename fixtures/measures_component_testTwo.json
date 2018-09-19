@@ -1,0 +1,21 @@
+{
+  "component": {
+    "id": "XYZ",
+    "key": "ABC",
+    "name": "testTwo",
+    "description": "",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "class_complexity",
+        "value": "4.9",
+        "periods": [
+          {
+            "index": 1,
+            "value": "0"
+          }
+        ]
+      }
+    ]
+  }
+}

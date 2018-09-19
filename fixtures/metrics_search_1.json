@@ -1,0 +1,31 @@
+{
+  "metrics": [
+    {
+      "id": "1",
+      "key": "overall_coverage_line_hits_data",
+      "type": "DATA",
+      "name": "Overall Coverage Hits by Line",
+      "description": "Coverage hits by all tests and by line",
+      "domain": "Coverage",
+      "direction": 0,
+      "qualitative": false,
+      "hidden": false,
+      "custom": false
+    },
+    {
+      "id": "2",
+      "key": "conditions_to_cover",
+      "type": "INT",
+      "name": "Conditions to Cover",
+      "description": "Conditions to cover",
+      "domain": "Coverage",
+      "direction": 0,
+      "qualitative": false,
+      "hidden": false,
+      "custom": false
+    }
+  ],
+  "total": 4,
+  "p": 1,
+  "ps": 2
+}

@@ -1,0 +1,17 @@
+{
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 1,
+    "total": 2
+  },
+  "components": [
+    {
+      "organization": "default-organization",
+      "id": "testOne",
+      "key": "identifier:testOne",
+      "name": "Test One",
+      "qualifier": "TRK",
+      "project": "identifier:testOne"
+    }
+  ]
+}
