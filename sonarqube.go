@@ -120,7 +120,7 @@ func (a *apiClient) findMeasuresForComponent(componentID string, metricKeys []st
 }
 
 func (a *apiClient) requestJSON(url string, v interface{}) error {
-	log.Debugf("Seding request to '%s'", url)
+	log.Debugf("Sending request to '%s'", url)
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
 		return err
@@ -136,6 +136,7 @@ func (a *apiClient) requestJSON(url string, v interface{}) error {
 		return err
 	}
 
+	defer resp.Body.Close()
 	data, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return err
