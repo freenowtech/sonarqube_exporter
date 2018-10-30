@@ -22,7 +22,7 @@ var (
 	sonarqubeURL        = flag.String("sonarqube.url", "http://localhost:8080", "URL of Sonarqube")
 	sonarqubeUsername   = flag.String("sonarqube.username", "", "Username to use for authentication")
 	projectFilterRegex  = flag.String("sonarqube.project-filter", ".*", "Regexp to limit the number of projects to scrape. Applied to the key of each project.")
-	accpetedMetricTypes = map[string]struct{}{"INT": struct{}{}, "PERCENT": struct{}{}, "FLOAT": struct{}{}}
+	accpetedMetricTypes = map[string]struct{}{"INT": struct{}{}, "PERCENT": struct{}{}, "FLOAT": struct{}{}, "DATA": struct{}{}}
 )
 
 type exporter struct {
@@ -87,7 +87,9 @@ func (e *exporter) scrape() {
 
 		for _, measure := range r.Component.Measures {
 			var measureFloat float64
-			if measure.Value != "" {
+			if _, ok := dataMetrics[measure.Metric]; ok {
+				measureFloat = dataMetricsValues[measure.Metric][measure.Value]
+			} else if measure.Value != "" {
 				measureFloat, err = strconv.ParseFloat(measure.Value, 64)
 				if err != nil {
 					log.Debugf("Value of measure '%s' could not be parsed: %s", measure.Metric, err)

@@ -79,6 +79,10 @@ func TestExporter(t *testing.T) {
 		`sonarqube_measures{component_key="identifier:testOne",metric="branch_coverage"} 35.4`,
 		`sonarqube_measures{component_key="identifier:testOne",metric="conditions_to_cover"} 794`,
 		`sonarqube_measures{component_key="identifier:testTwo",metric="class_complexity"} 4.9`,
+		`sonarqube_measures{component_key="identifier:testOne",metric="alert_status"} 2`,
+		`sonarqube_measures{component_key="identifier:testTwo",metric="reliability_rating"} 1`,
+		`sonarqube_measures{component_key="identifier:testTwo",metric="quality_gate_details"} 0`,
+		`sonarqube_measures{component_key="identifier:testOne",metric="reliability_rating"} 0`,
 	}
 	for _, test := range tests {
 		if !bytes.Contains(body, []byte(test)) {
