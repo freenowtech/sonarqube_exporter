@@ -25,6 +25,26 @@
             "value": "0.0"
           }
         ]
+      },
+      {
+        "metric": "alert_status",
+        "value": "ERROR",
+        "periods": [
+          {
+            "index": 1,
+            "value": "0.0"
+          }
+        ]
+      },
+      {
+        "metric": "reliability_rating",
+        "value": "A",
+        "periods": [
+          {
+            "index": 1,
+            "value": "0"
+          }
+        ]
       }
     ]
   }
