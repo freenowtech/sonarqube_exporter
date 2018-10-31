@@ -58,8 +58,7 @@ func (e *exporter) scrape() {
 	log.Debugf("Found %d metrics", len(allMetrics))
 	metricKeys := []string{}
 	for _, m := range allMetrics {
-		_, exists := accpetedMetricTypes[m.Type]
-		if exists {
+		if _, exists := accpetedMetricTypes[m.Type]; exists {
 			metricKeys = append(metricKeys, m.Key)
 		}
 	}
@@ -87,11 +86,10 @@ func (e *exporter) scrape() {
 
 		for _, measure := range r.Component.Measures {
 			var measureFloat float64
-			if _, ok := dataMetrics[measure.Metric]; ok {
+			if _, exists := dataMetrics[measure.Metric]; exists {
 				measureFloat = dataMetricsValues[measure.Metric][measure.Value]
 			} else if measure.Value != "" {
-				measureFloat, err = strconv.ParseFloat(measure.Value, 64)
-				if err != nil {
+				if measureFloat, err = strconv.ParseFloat(measure.Value, 64); err != nil {
 					log.Debugf("Value of measure '%s' could not be parsed: %s", measure.Metric, err)
 					continue
 				}
