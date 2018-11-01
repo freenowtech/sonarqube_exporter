@@ -86,8 +86,8 @@ func (e *exporter) scrape() {
 
 		for _, measure := range r.Component.Measures {
 			var measureFloat float64
-			if _, exists := dataMetrics[measure.Metric]; exists {
-				measureFloat = dataMetricsValues[measure.Metric][measure.Value]
+			if metric, exists := dataMetricsValues[measure.Metric]; exists {
+				measureFloat = metric[measure.Value]
 			} else if measure.Value != "" {
 				if measureFloat, err = strconv.ParseFloat(measure.Value, 64); err != nil {
 					log.Debugf("Value of measure '%s' could not be parsed: %s", measure.Metric, err)

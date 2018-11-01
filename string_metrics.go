@@ -1,11 +1,6 @@
 package main
 
 var (
-	dataMetrics = map[string]struct{}{
-		"alert_status":         struct{}{},
-		"quality_gate_details": struct{}{},
-		"reliability_rating":   struct{}{},
-	}
 	dataMetricsValues = map[string]map[string]float64{
 		"alert_status": map[string]float64{
 			"OK":    0,
