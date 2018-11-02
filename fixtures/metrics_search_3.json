@@ -1,0 +1,43 @@
+{
+  "metrics": [
+    {
+      "id": "5",
+      "key": "alert_status",
+      "type": "DATA",
+      "name": "Quality Alert Status",
+      "description": "State of the Quality Gate associated to your Project. Possible values are : ERROR, WARN, OK",
+      "domain": "Quality Gates",
+      "direction": -1,
+      "qualitative": true,
+      "hidden": true,
+      "custom": false
+    },
+    {
+        "id": "6",
+        "key": "reliability_rating",
+        "type": "DATA",
+        "name": "Quality Alert Status",
+        "description": "State of the Quality Gate associated to your Project. Possible values are : ERROR, WARN, OK",
+        "domain": "Quality Gates",
+        "direction": -1,
+        "qualitative": true,
+        "hidden": true,
+        "custom": false
+      },
+      {
+        "id": "7",
+        "key": "quality_gate_details",
+        "type": "DATA",
+        "name": "Quality Alert Status",
+        "description": "State of the Quality Gate associated to your Project. Possible values are : ERROR, WARN, OK",
+        "domain": "Quality Gates",
+        "direction": -1,
+        "qualitative": true,
+        "hidden": true,
+        "custom": false
+      }
+  ],
+  "total": 7,
+  "p": 1,
+  "ps": 3
+}

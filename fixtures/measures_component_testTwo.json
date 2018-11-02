@@ -15,6 +15,26 @@
             "value": "0"
           }
         ]
+      },
+      {
+        "metric": "quality_gate_details",
+        "value": "Passed",
+        "periods": [
+          {
+            "index": 1,
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "metric": "reliability_rating",
+        "value": "B",
+        "periods": [
+          {
+            "index": 1,
+            "value": "0"
+          }
+        ]
       }
     ]
   }
