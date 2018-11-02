@@ -38,7 +38,7 @@
       },
       {
         "metric": "reliability_rating",
-        "value": "A",
+        "value": "0.0",
         "periods": [
           {
             "index": 1,
