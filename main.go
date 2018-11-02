@@ -7,6 +7,7 @@ import (
 	"strconv"
 
 	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -138,7 +139,7 @@ func main() {
 		}),
 	}
 	prometheus.MustRegister(e)
-	http.Handle(*httpTelemetryPath, prometheus.Handler())
+	http.Handle(*httpTelemetryPath, promhttp.Handler())
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte(`<html>
 <head><title>Sonarqube Exporter</title></head>
